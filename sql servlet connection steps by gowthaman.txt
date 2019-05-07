@@ -1,0 +1,21 @@
+servelet + sql server connection
+======================
+step 1: install sql server
+step 2: install eclipse jee application
+step 3: download sqljdbc4-2.0.jar
+step 4: open sql server management studio
+           database + table with 5 rows data
+step 5: sql server register
+step 6: open sql server conficuration manager
+            start --> sqlserverservices (sqlserver(sqlexpress)
+                                                    (sqlserver Browser)
+             	--> TCP/IP --> enabled
+step 7: eclipse jee application--> open
+           create dynamic web project
+step 8: import sqljdbc4-2.0.jar
+           project name-->right click-->properties --> java build path --> library-->add external jar --> 
+      select jar file --> apply and close.
+step 9: copy sqljdbc4-2.0.jar 
+          paste to webcontent --> web-inf--> lib
+step 10: servelet file create --> java code type --> ctrl + f11 (run)-->output 	
+
