@@ -1,0 +1,2 @@
+PrintWriter pw=response.getWriter();
+		pw.println("<br>welcome to servlet");	
