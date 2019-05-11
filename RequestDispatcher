@@ -1,0 +1,3 @@
+		RequestDispatcher rd=request.getRequestDispatcher("/htmlfile/Test1.html");
+		//rd.include(request, response);
+		rd.forward(request, response);	
