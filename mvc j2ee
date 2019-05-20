@@ -1,0 +1,49 @@
+
+	MVC in J2EE:
+	============
+
+	M - Model   
+		(java)
+		common format file	(Reuse)	
+		java resources --> src folder --> sub package create
+		(only setter and getter method - pojo class)
+		(plain old java object)
+
+		setter method : value assign (arg passing must)
+		getter method : value return(don't pass arg)
+			
+		ex:
+		public class classname
+		{
+			private datatype var;
+			public returntype(datype or class (dont give void)) get()
+			{
+				return var;
+			} 
+			public void  set(datatype value)
+			{
+			var=value;
+			}
+		}
+	rules:
+		variable must be private.
+		method must be public.
+	advantages of using pojo class?
+
+			*) memory management efficient
+			*) do not modifiy pojo class members to others.
+			
+	V - View
+		(html,jsp)
+		output(result)
+		webcontent --> folder create --> filename.html or filename.jsp
+	C - Controller
+		(servlet)
+		business logic (for,while,......if,....)
+		java resources --> src folder --> sub package create
+		
+
+
+
+
+
