@@ -1,0 +1,14 @@
+
+<form method ="get" action="/vanmathi_j2ee/ResultServlet">
+
+                            /project name/servlet file   -- correct way
+                            
+                             /project name/java resources/src/package/servlet file -- don't give
+
+
+Enter No.1:<input type="text" name="n1"></input>
+<br><br>
+Enter No.2:<input type="text" name="n2"></input>
+<br><br>
+<input type="submit" value="showresult"></input>
+</form>
