@@ -1,0 +1,132 @@
+step 1:
+download eclipse --> package click --> eclipse ide for java enterprise web
+-->window x64 553 mb
+
+step 2:
+	extract zip (download file)
+
+step 3:
+	eclipse.exe (right click -->send to desktop)
+
+step 4: create workspace
+       ex:(d:/student/course/j2ee)
+step 5: file new --> dynamic web project.
+	project name : anyname
+	runtime version: 5.0
+	web.xml tick
+	next -->finish
+step 6:
+	create html folder(view) inside webapp folder.
+	create html file
+
+step 7:
+	servers tab --> apache -->version 11(jdk22)
+	--> next -->download and install -->folder select --> ok. (2 mins wait)
+	
+step 8:
+	run  (green play button)
+	error
+
+step 9: suppose we faced error.
+	double click apache server 11 in servers --> open launch configuration --> class path -->click user entities --> add external jars -->
+select apache server 11 folder --> bin --> we can 2 files add (bootstrap.jar & tomcat-juli.jar)
+apply and apply and close.
+
+step 10:
+	run
+========================================
+how to add servlet file ?
+
+java resources --> src/main/java
+	       --> create package
+  	       --> create servlet
+	       --> it will shows 6 errors (servlets errors)
+		
+		project name --> right click --> properties --> java build path --> libraries -->select class path --> show apache 11 folder --> goto lib folder -->select servlet-api.jar. --> apply and apply and close.
+
+it will clear all the servlet class errors
+===========================================
+
+servelet program:
+	project name --> java/src/main --> create package --> add servlet.
+
+example: Myservet (servlet file)
+
+package myservlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class Mypgm
+ */
+@WebServlet("/Mypgm")
+public class Mypgm extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public Mypgm() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter pw=response.getWriter();
+		pw.println("<h1>welcome to servelet");
+		String user=request.getParameter("un");
+		String pass=request.getParameter("pw");
+		pw.println("<br>User Name:"+user);
+		pw.println("<br>Password:"+pass);	
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+=============================================
+	
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/myservlet/Mypgm">
+	<input type="text" name="un" placeholder="Enter user name">
+	<br>
+	<input type="password" name="pw" placeholder="Enter Password:">
+	<br>
+	<input type="submit" value="clickme">
+</form>
+</body>
+</html>
+=======================================================
+
+
+note:
+  	     // projectname/servletname
+<form action="/myservlet/Mypgm">
+
+
+
+
+
+	
